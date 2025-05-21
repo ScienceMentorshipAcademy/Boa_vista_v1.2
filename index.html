@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro Inteligente de Materiais</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Cadastro Inteligente de Materiais</h2>
+    <div class="opcoes">
+      <button id="btnManual" class="opcao">Cadastrar manualmente</button>
+      <button id="btnNota" class="opcao">Cadastrar com nota fiscal</button>
+    </div>
+
+    <!-- Formulário de cadastro manual -->
+    <form id="materialForm" style="display:none;">
+      <label for="descricao">Descrição do Material</label>
+      <textarea id="descricao" required placeholder="Ex: 20 sacos de cimento CP-II, marca Votoran, lote 1234"></textarea>
+      <button type="submit">Cadastrar</button>
+    </form>
+
+    <!-- Formulário de cadastro por nota fiscal -->
+    <div id="notaFiscalForm" style="display:none;">
+      <p>Selecione uma imagem da nota fiscal:</p>
+      <div class="file-input-container">
+        <input type="file" id="notaFiscalInput" accept="image/*" capture="environment">
+        <label for="notaFiscalInput" class="file-input-label">
+          <span id="fileNameDisplay">Nenhum arquivo selecionado</span>
+          <span class="file-input-button">Escolher arquivo</span>
+        </label>
+      </div>
+      <div class="camera-option">
+        <button id="cameraButton" class="camera-btn">
+          <span class="camera-icon">📷</span> Tirar foto
+        </button>
+      </div>
+      <button id="enviarNotaFiscal" class="btn-enviar">Processar Nota Fiscal</button>
+    </div>
+
+    <div class="msg" id="msg"></div>
+    <div class="resposta" id="resposta"></div>
+    <div class="msg" id="msgNota" style="display:none;"></div>
+
+    <!-- Preview da imagem -->
+    <div id="imagePreview" style="display:none;">
+      <img id="previewImg" src="" alt="Preview da nota fiscal">
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

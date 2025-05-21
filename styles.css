@@ -1,0 +1,200 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 420px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 32px 24px 24px 24px;
+  border-radius: 10px;
+  box-shadow: 0 2px 16px #b0b0b0;
+}
+
+h2 {
+  text-align: center;
+  color: #1976d2;
+  margin-bottom: 24px;
+}
+
+.opcoes {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  gap: 10px;
+}
+
+.opcao {
+  flex: 1;
+  padding: 12px 0;
+  background: #e3f2fd;
+  color: #1976d2;
+  border: 1.5px solid #1976d2;
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.opcao:hover, .opcao.active {
+  background: #1976d2;
+  color: #fff;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 500;
+}
+
+textarea {
+  width: 100%;
+  min-height: 60px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #bdbdbd;
+  margin-bottom: 16px;
+  font-size: 1em;
+  resize: vertical;
+}
+
+button[type="submit"], .btn-enviar {
+  width: 100%;
+  padding: 12px;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 16px;
+}
+
+button[type="submit"]:hover, .btn-enviar:hover {
+  background: #1565c0;
+}
+
+.msg {
+  margin-top: 16px;
+  text-align: center;
+  color: #1976d2;
+  font-weight: 500;
+}
+
+.resposta {
+  margin-top: 20px;
+  background: #e3f2fd;
+  border-left: 4px solid #1976d2;
+  padding: 12px;
+  border-radius: 6px;
+  color: #333;
+  font-size: 1em;
+  display: none;
+}
+
+/* Estilos para o input de arquivo */
+.file-input-container {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.file-input-container input[type="file"] {
+  position: absolute;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.file-input-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #bdbdbd;
+  border-radius: 6px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+#fileNameDisplay {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #666;
+}
+
+.file-input-button {
+  background: #e3f2fd;
+  color: #1976d2;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Estilos para o botão de câmera */
+.camera-option {
+  margin-bottom: 16px;
+}
+
+.camera-btn {
+  width: 100%;
+  padding: 10px;
+  background: #e3f2fd;
+  color: #1976d2;
+  border: 1px solid #1976d2;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.camera-icon {
+  font-size: 1.2em;
+}
+
+/* Estilos para o preview da imagem */
+#imagePreview {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#previewImg {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 480px) {
+  .container {
+    max-width: 100%;
+    margin: 20px 10px;
+    padding: 20px 15px;
+  }
+
+  .opcoes {
+    flex-direction: column;
+  }
+
+  .opcao {
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+}
